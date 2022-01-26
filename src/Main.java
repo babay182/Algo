@@ -14,6 +14,7 @@ import Prototype.Sheep;
 import Proxy.ISite;
 import Proxy.Site;
 import Proxy.SiteProxy;
+import Singlton.Singl;
 import TemplateMethod.AnalogTransmitter;
 import TemplateMethod.DigitTransmitter;
 import TemplateMethod.Transmitter;
@@ -97,10 +98,16 @@ public class Main{
 //        System.out.println(designer.execute("клеить обои"));
 //        System.out.println(designer.execute("пить пиво"));
 
-        MarketPlace marketPlace = new MarketPlace();
-        marketPlace.productReceipt();
-        System.out.println("--------------");
-        marketPlace.productRelease();
+//        MarketPlace marketPlace = new MarketPlace();
+//        marketPlace.productReceipt();
+//        System.out.println("--------------");
+//        marketPlace.productRelease();
+
+        Singl s1 = Singl.getSengl();//Singlton
+        Singl s2 = Singl.getSengl();
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s1 == s2);
     }
 
 }
